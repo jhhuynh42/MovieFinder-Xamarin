@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MovieFinder.Search">
+    <StackLayout>
+        <Label x:Name="SearchParm" FontSize="Title" HorizontalTextAlignment="Center" 
+               Padding="10"
+               BackgroundColor="Silver"
+               />
+        <ListView x:Name="searchList" ItemSelected="searchList_ItemSelected">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ImageCell Text="{Binding Title}"
+                               Detail="{Binding Year}"
+                               ImageSource="{Binding Poster}">
+                    </ImageCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+</ContentPage>

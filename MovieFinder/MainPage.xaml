@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MovieFinder.MainPage">
+
+    <RelativeLayout >
+
+        <Label Text="Movie Finder" 
+            FontSize="30"
+			VerticalTextAlignment="Center"
+			HorizontalTextAlignment="Center"
+			TextColor="black"
+			BackgroundColor="Silver" 
+			Opacity="0.5"
+			HeightRequest="50"
+			RelativeLayout.WidthConstraint="{
+				ConstraintExpression Type=RelativeToParent,
+				Property=Width,
+				Factor=1,
+				Constant=0
+			}"
+         />
+        <Button Text="FAVORITES" Clicked="Favorite_Clicked"
+			RelativeLayout.YConstraint="{
+				ConstraintExpression Type=RelativeToParent,
+				Property=Height,
+				Factor=0.0,
+				Constant=0
+			}"
+
+			RelativeLayout.XConstraint="{
+				ConstraintExpression Type=RelativeToParent,
+				Property=Width,
+				Factor=0.73,
+				Constant=10
+			}"
+		/>
+
+        <Entry Placeholder="Enter the movie title" 
+               PlaceholderColor="Gray" 
+               x:Name="SearchTitle" 	
+               HorizontalOptions="FillAndExpand"
+               RelativeLayout.WidthConstraint="{ConstraintExpression  
+            Type=RelativeToParent,  
+            Property=Width,  
+            Factor=1}"
+               RelativeLayout.YConstraint="{
+				ConstraintExpression Type=RelativeToParent,
+				Property=Height,
+				Factor=0.1,
+				Constant=0
+			}"
+
+			RelativeLayout.XConstraint="{
+				ConstraintExpression Type=RelativeToParent,
+				Property=Width,
+				Factor=0.0,
+				Constant=0
+			}"
+        />
+        <Button Text="QUICK SEARCH" Clicked="Search_clicked"
+            RelativeLayout.YConstraint="{
+				ConstraintExpression Type=RelativeToParent,
+				Property=Height,
+				Factor=0.2,
+				Constant=0
+			}"
+
+			RelativeLayout.XConstraint="{
+				ConstraintExpression Type=RelativeToParent,
+				Property=Width,
+				Factor=0.0
+			}"/>
+        <Button Text="SEARCH" Clicked="Search"
+            RelativeLayout.YConstraint="{
+				ConstraintExpression Type=RelativeToParent,
+				Property=Height,
+				Factor=0.3,
+				Constant=0
+			}"
+
+			RelativeLayout.XConstraint="{
+				ConstraintExpression Type=RelativeToParent,
+				Property=Width,
+				Factor=0.0
+			}"/>
+        <Label Text="" TextColor="Red" x:Name="Warning" 
+            RelativeLayout.YConstraint="{
+				ConstraintExpression Type=RelativeToParent,
+				Property=Height,
+				Factor=0.17,
+				Constant=0
+			}"
+
+			RelativeLayout.XConstraint="{
+				ConstraintExpression Type=RelativeToParent,
+				Property=Width,
+				Factor=0.0
+			}"/>
+    </RelativeLayout>
+
+</ContentPage>

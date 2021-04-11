@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MovieFinder.Details">
+    <RelativeLayout  Margin="20">
+        <StackLayout>
+            <Image x:Name="image" Source="{Binding Path=Poster}" />
+            <Label Text="{Binding Path=Title}" FontSize="Title" VerticalOptions="Center" HorizontalOptions="Center" x:Name="filmTitle"/>
+            <Label Text="{Binding Path=Year,StringFormat='Year: {0}'}"/>
+            <Label Text="{Binding Path=Released,StringFormat='Released: {0}'}" />
+            <Label Text="{Binding Path=Runtime, StringFormat='Runtime: {0}'}" />
+            <Label Text="{Binding Path=Genre, StringFormat='Genre: {0}'}" />
+            <Label Text="{Binding Path=Director, StringFormat='Director: {0}'}" />
+            <Label Text="{Binding Path=Writer, StringFormat='Writer: {0}'}" />
+            <Label Text="{Binding Path=Actors, StringFormat='Actors: {0}'}" />
+            <Label Text="{Binding Path=Language, StringFormat='Language: {0}'}" />
+            <Label Text="{Binding Path=Country, StringFormat='Country: {0}'}" />
+            <Label Text="{Binding Path=Awards, StringFormat='Awards: {0}'}" />
+            <Label Text="{Binding Path=imdbRating, StringFormat='imdbRating: {0}'}" />
+            <Label Text="{Binding Path=imdbVotes, StringFormat='imdbVotes: {0}'}" />
+            <Label Text="{Binding Path=Plot, StringFormat='Plot: {0}'}" />
+            <Label Text="{Binding Path=imdbID, StringFormat='{0}'}" x:Name="filmID"/>
+            <Button Text="Add To Favorites" Clicked="FavoriteAdd" x:Name="FavButton"/>
+        </StackLayout>
+    </RelativeLayout>
+</ContentPage>
